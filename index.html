@@ -4,20 +4,22 @@
         <meta charset="UTF-8">
         <title>Google</title>
         <style>
-            body, input, button {
+            input, button {
                 font-size: 14px;
                 font-family: arial,sans-serif;
                 color: #222;
             }
             .button {
-                font-family: arial, sans-serif;
                 text-align: center;
-                text-decoration: none;
                 display: inline-block;
                 padding: 6px 24px; 
-                background-color: white;
-                -moz-appearance: none;
-                border: none;
+                background-color: #f2f2f2;
+                border: 1px solid #f2f2f2;
+                border-radius: 4px;
+                height: 35px;
+            }
+            #buttons {
+                text-align: center;
             }
             .content {
                 width: auto;
@@ -28,11 +30,11 @@
             }
             .logo-container {
                 display: flex;
+                justify-content: center;
             }
-            .logo {
-                flex: 1;
+            #logo {
+                flex: 0;
                 display: flex;
-                
             }
             .search-bar-container {
                 background: #fff;
@@ -50,29 +52,81 @@
                 display: flex;
                 padding: 5px 8px 0 16px;
             }
+            .nav {
+                background-color: white;
+                height: 155px;
+                padding: 14px 16px;
+                font-size: 13px;
+                text-decoration: none;
+            }
+            .footer {
+                position: fixed;
+                background-color: #f2f2f2;
+                height: 20px;
+                font-size: 13px;
+                text-decoration: none;
+                padding: 14px 16px;
+                border: 1px solid #dfe1e5;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            nav:hover, a:visited, a:link, a:active
+            {
+                text-decoration: none;
+            }
+            #nav-left {
+                text-align: left;
+                text-decoration: none;
+            }
+            #nav-right {
+                text-align: right;
+            }
+            #footer-left {
+                text-align: left;
+            }
+            #footer-right {
+                text-align: right;
+            }
         </style>
     </head>
-    <body min-width:800px;
-    width: auto !important;
-    width:800px;>
-        
-        <div id="main" class="content" >
-            <div class="logo-container" >
+    <body>
+        <div class="nav">
+            <div id="nav-left">
+                <a href="#">About</a>
+                <a href="#">Store</a>
+            </div>
+            <div id="nav-right">
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+            </div>
+        </div> 
+
+        <div id="main" class="content">
+            <div class="logo-container">
                 <img src="googlelogo.png" id="logo" alt="Google logo">
             </div>
             <div class="search-bar-container">
                 <div class="search-bar">
-
                 </div>
             </div>
-            <div class="main">
-<!--
-        <img src="googlelogo.png" id="google-logo" alt="Google logo">
-        <input type="text" id="search-bar" name="search-bar">
-            <a href="#" id="search-button"><button class="button">Google Search</button></a>
-            <a href="#" id="lucky-button"><button class="button">I'm Feeling Lucky</button></a>
+            <div id="buttons">
+                <a href="#" id="search-button"><button class="button">Google Search</button></a>
+                <a href="#" id="lucky-button"><button class="button">I'm Feeling Lucky</button></a>
+            </div>
         </div>
-    -->
-</div>
+
+        <div class="footer">
+            <div id="footer-left">
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div id="footer-right">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
     </body>
 </html>
