@@ -17,6 +17,12 @@
                 border: 1px solid #f2f2f2;
                 border-radius: 4px;
                 height: 35px;
+                color: rgba(0,0,0, 0.7)
+                
+            }
+            .button:hover {
+                color: rgba(0,0,0,1);
+                border: 1px solid lightgray;
             }
             #buttons {
                 text-align: center;
@@ -31,10 +37,15 @@
             .logo-container {
                 display: flex;
                 justify-content: center;
+                height: 125px;
             }
             #logo {
-                flex: 0;
                 display: flex;
+                width: auto;
+                height: 110px;
+            }
+            .search {
+                height: 75px;
             }
             .search-bar-container {
                 background: #fff;
@@ -46,24 +57,80 @@
                 margin: 0 auto;
                 width: auto;
                 max-width: 584px;
+                
             }
             .search-bar {
                 flex: 1;
                 display: flex;
                 padding: 5px 8px 0 16px;
+                
+            }
+            .search-bar:hover{
+                box-shadow: 1px 1px #9AA0A6;
+                border-radius: 24px;
+            }
+            #search-input-bar {
+                width: 500px;
+                height: 32px;
+                background-color: transparent;
+                border: none;
+                margin: 0;
+                margin-top: 0px;
+                padding: 0;
+                color: rgba(0,0,0,.87);
+                word-wrap: break-word;
+                outline: none;
+                display: flex;
+                flex: 100%;
+                font: 16px arial, sans-serif;
+                justify-self: right;
+            }
+            #search-glass {
+                color: #9AA0A6;
+                padding-right: 20px;
+                padding-top: 8px;
+                opacity: 0.4;
+                display: inline-block;
+                fill: currentColor;
+                height: 20px;
+                width: 20px;
+                line-height: 24px;
+                position: relative;
+                justify-self: left;
+            }
+            .buttons {
+                height: 100px;
+                justify-content: center;
+                display: flex;
+            }
+            #search-button {
+                display: flex;
+                height: 40px;
+                padding-right: 7px;
+            }
+            #lucky-button {
+                display: flex;
+                height: 40px;
+                padding-left: 7px;
             }
             .nav {
                 background-color: white;
-                height: 155px;
+                height: 115px;
                 padding: 14px 16px;
                 font-size: 13px;
                 text-decoration: none;
+                color: black;
+                
+            }
+            .nav-text {
+                padding-left: 12px;
+                margin: 0 !important;
             }
             .footer {
                 position: fixed;
                 background-color: #f2f2f2;
-                height: 20px;
-                font-size: 13px;
+                height: 12px;
+                font-size: 12px;
                 text-decoration: none;
                 padding: 14px 16px;
                 border: 1px solid #dfe1e5;
@@ -71,31 +138,43 @@
                 bottom: 0;
                 width: 100%;
             }
+            .footer-text {
+                padding-left: 27px;
+                margin: 0 !important;
+
+            }
+            .footer-text:hover {
+                text-decoration: underline;
+            }
+            .nav-text:hover {
+                text-decoration: underline;
+            }
             nav:hover, a:visited, a:link, a:active
             {
                 text-decoration: none;
             }
-            #nav-left {
-                text-align: left;
-                text-decoration: none;
-            }
             #nav-right {
-                text-align: right;
+                display: flex;
+                float: right;
+                width: 150px;
             }
             #footer-left {
-                text-align: left;
+                width: 350px;
             }
             #footer-right {
-                text-align: right;
+                margin-right: 40px;
+                float: right;
             }
         </style>
     </head>
-    <body>
+    <body font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;>
         <div class="nav">
-            <div id="nav-left">
-                <a href="#">About</a>
-                <a href="#">Store</a>
-            </div>
+            <span id="nav-left">
+                <a class="nav-text" href="#">About</a>
+                <a class="nav-text" href="#">Store</a>
+            </span>
             <div id="nav-right">
                 <a href="#">Gmail</a>
                 <a href="#">Images</a>
@@ -106,27 +185,33 @@
             <div class="logo-container">
                 <img src="googlelogo.png" id="logo" alt="Google logo">
             </div>
-            <div class="search-bar-container">
-                <div class="search-bar">
+            <div class="search">
+                <div class="search-bar-container">
+                    <div class="search-bar">
+                        <img src="magnifying_glass.png" id="search-glass" alt="A picture of a magnifying glass.">
+                        <form>
+                        <input type="text" id="search-input-bar">
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div id="buttons">
+            <div class="buttons">
                 <a href="#" id="search-button"><button class="button">Google Search</button></a>
                 <a href="#" id="lucky-button"><button class="button">I'm Feeling Lucky</button></a>
             </div>
         </div>
 
         <div class="footer">
-            <div id="footer-left">
-                <a href="#">Advertising</a>
-                <a href="#">Business</a>
-                <a href="#">How Search works</a>
-            </div>
-            <div id="footer-right">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Settings</a>
-            </div>
+            <span id="footer-left">
+                <a class="footer-text"href="#">Advertising</a>
+                <a class="footer-text"href="#">Business</a>
+                <a class="footer-text"href="#">How Search works</a>
+            </span>
+            <span id="footer-right">
+                <a class="footer-text"href="#">Privacy</a>
+                <a class="footer-text"href="#"></a>Terms</a>
+                <a class="footer-text"href="#"></a>Settings</a>
+            </span>
         </div>
     </body>
 </html>
