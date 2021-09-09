@@ -2,8 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Google</title>
+        <title>Foogle</title>
         <style>
+            a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+                cursor: pointer;
+            }
+
             input, button {
                 font-size: 14px;
                 font-family: arial,sans-serif;
@@ -26,6 +30,68 @@
             }
             #buttons {
                 text-align: center;
+            }
+            .nav {
+                background-color: white;
+                height: 115px;
+                padding: 14px 16px;
+                font-size: 13px;
+                text-decoration: none;
+                color: black;
+                
+            }
+            .nav-text-left:hover {
+                text-decoration: underline;
+            }
+            .nav-text-right:hover {
+                text-decoration: underline;
+            }
+            nav:hover, a:visited, a:link, a:active
+            {
+                text-decoration: none;
+            }
+            #nav-right {
+                display: flex;
+                float: right;
+                width: 230px;
+            }
+            .nav-text-left {
+                padding-left: 12px;
+                margin: 0 !important;
+            }
+            #gmail-images-box {
+                display: flex;
+                width: 106px;
+                font-size: 12px;
+                color: rgba(0,0,0,.87);
+                padding-right: 12px;
+            }
+            #gmail {
+                width: 34px;
+                padding-top: 5px;
+            }
+            #images {
+                width: 43px;
+                padding-top: 5px;
+                padding-left: 12px;
+            }
+            #app-icon {
+                opacity: 0.5;
+                padding-right: 35px;
+                padding-top: 5px;
+            }
+            #apps-pfp-box {
+                display: flex;
+                width: 100px;
+                height: 30px;
+                justify-content: left;
+            }
+            #pfp {
+                flex: 1;
+                justify-self: right;
+                height:30px;
+                width:30px;
+                border-radius: 24px;
             }
             .content {
                 width: auto;
@@ -56,8 +122,6 @@
                 height: 44px;
                 margin: 0 auto;
                 width: auto;
-                max-width: 584px;
-                
             }
             .search-bar {
                 flex: 1;
@@ -83,7 +147,7 @@
                 display: flex;
                 flex: 100%;
                 font: 16px arial, sans-serif;
-                justify-self: right;
+                
             }
             #search-glass {
                 color: #9AA0A6;
@@ -96,7 +160,7 @@
                 width: 20px;
                 line-height: 24px;
                 position: relative;
-                justify-self: left;
+                
             }
             .buttons {
                 height: 100px;
@@ -113,19 +177,7 @@
                 height: 40px;
                 padding-left: 7px;
             }
-            .nav {
-                background-color: white;
-                height: 115px;
-                padding: 14px 16px;
-                font-size: 13px;
-                text-decoration: none;
-                color: black;
-                
-            }
-            .nav-text {
-                padding-left: 12px;
-                margin: 0 !important;
-            }
+            
             .footer {
                 position: fixed;
                 background-color: #f2f2f2;
@@ -146,18 +198,6 @@
             .footer-text:hover {
                 text-decoration: underline;
             }
-            .nav-text:hover {
-                text-decoration: underline;
-            }
-            nav:hover, a:visited, a:link, a:active
-            {
-                text-decoration: none;
-            }
-            #nav-right {
-                display: flex;
-                float: right;
-                width: 150px;
-            }
             #footer-left {
                 width: 350px;
             }
@@ -169,15 +209,25 @@
     </head>
     <body font-size: 14px;
     font-family: arial,sans-serif;
-    color: #222;>
+    color: #222; margin-top: 0px;>
         <div class="nav">
             <span id="nav-left">
-                <a class="nav-text" href="#">About</a>
-                <a class="nav-text" href="#">Store</a>
+                <a class="nav-text-left" href="#">About</a>
+                <a class="nav-text-left" href="#">Store</a>
             </span>
             <div id="nav-right">
-                <a href="#">Gmail</a>
-                <a href="#">Images</a>
+                <div id ="gmail-images-box">
+                    <div id="gmail">
+                        <a href="#">Gmail</a>
+                    </div>
+                    <div id="images">
+                        <a href="#">Images</a>
+                    </div>
+                </div>
+                <div id="apps-pfp-box">
+                <a href="#"><img src="apps-icon.png" id="app-icon" alt="An icon of Google Apps."></a>
+                <a href="https://github.com/lilboisoul"><img src="pfp.png" id="pfp" alt="My profile picture on GitHub."></a>
+                </div>
             </div>
         </div> 
 
@@ -209,8 +259,8 @@
             </span>
             <span id="footer-right">
                 <a class="footer-text"href="#">Privacy</a>
-                <a class="footer-text"href="#"></a>Terms</a>
-                <a class="footer-text"href="#"></a>Settings</a>
+                <a class="footer-text"href="#">Terms</a>
+                <a class="footer-text"href="#">Settings</a>
             </span>
         </div>
     </body>
